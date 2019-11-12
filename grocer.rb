@@ -83,6 +83,8 @@ def apply_coupons(cart, coupons)
   
     cart_index += 1 
   end
+  adjusted_cart.compact!
+  
   # janky check if adjusted_cart was used or not
   if adjusted_cart == []
     return adjusted_cart = cart
