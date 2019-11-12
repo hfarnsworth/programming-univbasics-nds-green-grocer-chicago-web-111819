@@ -44,7 +44,7 @@ def consolidate_cart(cart)
     end
     item_index += 1 
   end
-  pp updated_cart
+  updated_cart
 end
 
 def apply_coupons(cart, coupons)
@@ -85,7 +85,7 @@ def apply_coupons(cart, coupons)
   end
   # janky check if adjusted_cart was used or not
   if adjusted_cart == []
-    return adjusted_cart = cart
+    return pp adjusted_cart = cart
   else
     return adjusted_cart = adjusted_cart + coupon_cart
   end
