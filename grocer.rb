@@ -75,7 +75,7 @@ def apply_coupons(cart, coupons)
           :clearance=> adjusted_cart[cart_index][:clearance]
         }
       else
-        adjusted_cart[cart_index] = cart[cart_index]
+        pp adjusted_cart[cart_index] = cart[cart_index]
       end
     else
       
@@ -85,7 +85,7 @@ def apply_coupons(cart, coupons)
   end
   # janky check if adjusted_cart was used or not
   if adjusted_cart == []
-    return pp adjusted_cart = cart
+    return adjusted_cart = cart
   else
     return adjusted_cart = adjusted_cart + coupon_cart
   end
