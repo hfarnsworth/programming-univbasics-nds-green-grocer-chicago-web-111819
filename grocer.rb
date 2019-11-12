@@ -59,7 +59,7 @@ def apply_coupons(cart, coupons)
   while cart_index < cart.length do 
     valid_coupon = find_item_by_name_in_collection(cart[cart_index][:item], coupons)
     
-    if coupon_check
+    if valid_coupon
       if cart[cart_index][:count] < valid_coupon[:num]
         updated_cart[cart_index] = cart[cart_index]
       else
