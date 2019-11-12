@@ -94,7 +94,13 @@ def apply_clearance(cart)
   #
   # REMEMBER: This method **should** update cart
   
-  clearance_cart
+  clearance_cart = []
+  index = 0 
+  
+  while index < cart.length do 
+    if cart[index][:clearance]
+      
+  
 end
 
 def checkout(cart, coupons)
