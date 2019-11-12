@@ -38,8 +38,8 @@ def consolidate_cart(cart)
         end
       end
     else
-      updated_cart[item_index] = cart[item_index]
-      updated_cart[item_index][:count] = 1 
+      updated_cart[duplicate_index] = cart[item_index]
+      updated_cart[duplicate_index][:count] = 1 
       duplicate_index += 1 
     end
     item_index += 1 
