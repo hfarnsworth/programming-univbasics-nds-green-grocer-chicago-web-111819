@@ -75,6 +75,9 @@ def apply_coupons(cart, coupons)
     else
       
     end
+  
+    cart_index += 1 
+  end
         
   adjusted_cart += coupon_cart
 end
