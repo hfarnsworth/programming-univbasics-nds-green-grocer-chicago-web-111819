@@ -44,7 +44,7 @@ def consolidate_cart(cart)
     end
     item_index += 1 
   end
-  updated_cart
+  pp updated_cart
 end
 
 def apply_coupons(cart, coupons)
