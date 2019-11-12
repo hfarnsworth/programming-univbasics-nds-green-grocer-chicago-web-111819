@@ -32,10 +32,10 @@ def consolidate_cart(cart)
       while index < updated_cart.length do 
         if updated_cart[index][:item] == item
           updated_cart[index][:count] += 1 
-          index += 1 
         else
-          index += 1 
+          
         end
+        index += 1 
       end
     else
       updated_cart[duplicate_index] = cart[item_index]
