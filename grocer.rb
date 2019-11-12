@@ -72,7 +72,8 @@ def apply_coupons(cart, coupons)
         coupon_cart << { 
           :item=> coupon_name, 
           :price=> coupon_price,
-          :count=> coupon_count
+          :count=> coupon_count,
+          :clearance=> cart[cart_index][:clearance]
         }
       end
     else
