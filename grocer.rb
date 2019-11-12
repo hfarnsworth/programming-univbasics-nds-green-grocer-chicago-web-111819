@@ -71,8 +71,12 @@ def apply_coupons(cart, coupons)
           :price=> valid_coupon[:cost] / valid_coupon[:num],
           :count=> valid_coupon[:num]
         }
+      end
+    else
+      
+    end
         
-  
+  adjusted_cart += coupon_cart
 end
 
 def apply_clearance(cart)
