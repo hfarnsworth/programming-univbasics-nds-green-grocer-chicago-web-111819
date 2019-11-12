@@ -53,6 +53,12 @@ def apply_coupons(cart, coupons)
   # REMEMBER: This method **should** update cart
   
   adjusted_cart = cart
+  cart_index = 0 
+  while cart_index < adjusted_cart.length do 
+    coupon_index = 0 
+    
+    while coupon_index < coupons.length do
+      if find_item_by_name_in_collection(name, collection)
   
 end
 
