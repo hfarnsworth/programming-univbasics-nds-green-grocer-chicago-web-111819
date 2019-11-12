@@ -128,5 +128,19 @@ def checkout(cart, coupons)
   final_cart = apply_coupons(final_cart,coupons)
   final_cart = apply_clearance(final_cart)
   
+  total = 0.00
+  index = 0 
+  while index < final_cart.length do 
+    item_subtotal = 0 
+    item_subtotal = (final_cart[:price] * final_cart[:count]).round(2)
+    total += item_subtotal
+    index += 1 
+  end
+  
+  if total > 100.00
+    return total = (total * 0.90).round(2)
+  else
+    return total
+  end
   
 end
