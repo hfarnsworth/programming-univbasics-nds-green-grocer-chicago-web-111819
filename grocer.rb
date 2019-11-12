@@ -84,9 +84,9 @@ def apply_coupons(cart, coupons)
   end
   # janky check if adjusted_cart was used or not
   if adjusted_cart == []
-    adjusted_cart = cart
+    return adjusted_cart = cart
   else
-    adjusted_cart = adjusted_cart + coupon_cart
+    return adjusted_cart = adjusted_cart + coupon_cart
   end
 end
 
