@@ -60,9 +60,7 @@ def apply_coupons(cart, coupons)
     valid_coupon = find_item_by_name_in_collection(cart[cart_index][:item], coupons)
     
     if valid_coupon
-      if valid_coupon[:num] > cart[cart_index][:count]
-        adjusted_cart[cart_index] = cart[cart_index]
-      else
+      if cart[cart_index][:count] >= valid_coupon[:num]
         adjusted_cart[cart_index] = cart[cart_index]
         adjusted_cart[cart_index][:count] = adjusted_cart[cart_index][:count] - valid_coupon[:num]
         
@@ -76,6 +74,8 @@ def apply_coupons(cart, coupons)
           :count=> coupon_count,
           :clearance=> adjusted_cart[cart_index][:clearance]
         }
+        adjusted_cart[cart_index] = cart[cart_index]
+      else
       end
     else
       
