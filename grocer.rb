@@ -73,7 +73,7 @@ def apply_coupons(cart, coupons)
           :item=> coupon_name, 
           :price=> coupon_price,
           :count=> coupon_count,
-          :clearance=> cart[cart_index][:clearance]
+          :clearance=> adjusted_cart[cart_index][:clearance]
         }
       end
     else
