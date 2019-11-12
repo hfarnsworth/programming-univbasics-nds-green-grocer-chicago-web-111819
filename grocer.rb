@@ -81,14 +81,20 @@ def apply_coupons(cart, coupons)
   
     cart_index += 1 
   end
-        
-  adjusted_cart = adjusted_cart + coupon_cart
+  # janky check if adjusted_cart was used or not
+  if adjusted_cart
+    adjusted_cart = adjusted_cart + coupon_cart
+  else
+    cart
+  end
 end
 
 def apply_clearance(cart)
   # Consult README for inputs and outputs
   #
   # REMEMBER: This method **should** update cart
+  
+  clearance_cart
 end
 
 def checkout(cart, coupons)
