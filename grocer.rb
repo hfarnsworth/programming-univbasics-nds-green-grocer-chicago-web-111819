@@ -78,7 +78,7 @@ def apply_coupons(cart, coupons)
         adjusted_cart[cart_index] = cart[cart_index]
       end
     else
-      adjusted_cart[cart_index] = cart[cart_index]
+      
     end
   
     cart_index += 1 
