@@ -87,7 +87,7 @@ def apply_coupons(cart, coupons)
   if adjusted_cart == []
     return adjusted_cart = cart
   else
-    return adjusted_cart = adjusted_cart + coupon_cart
+    return adjusted_cart = (adjusted_cart + coupon_cart
   end
 end
 
