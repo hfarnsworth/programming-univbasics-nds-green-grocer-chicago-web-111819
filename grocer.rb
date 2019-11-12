@@ -66,9 +66,13 @@ def apply_coupons(cart, coupons)
       else
         adjusted_cart[cart_index] = cart[cart_index]
         adjusted_cart[cart_index][:count] -= valid_coupon[:num]
+        coupon_name = "#{coupon_item} W/COUPON"
+        coupon_price = valid_coupon[:cost] / valid_coupon[:num]
+        
+        
         coupon_cart << { 
-          :item=> "#{coupon_item} W/COUPON",
-          :price=> valid_coupon[:cost] / valid_coupon[:num],
+          :item=> coupon_name, 
+          :price=> ,
           :count=> valid_coupon[:num]
         }
       end
