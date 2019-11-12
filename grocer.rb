@@ -64,8 +64,8 @@ def apply_coupons(cart, coupons)
       if cart[cart_index][:count] < valid_coupon[:num]
         updated_cart[cart_index] = cart[cart_index]
       else
-        updated_cart[cart_index] = cart[cart_index]
-        updated_cart[cart_index][:count] -= valid_coupon[:num]
+        adjusted_cart[cart_index] = cart[cart_index]
+        adjusted_cart[cart_index][:count] -= valid_coupon[:num]
         coupon_cart << { 
           :item=> "#{coupon_item} W/COUPON",
           :price=> valid_coupon[:cost] / valid_coupon[:num],
