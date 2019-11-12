@@ -52,6 +52,7 @@ def apply_coupons(cart, coupons)
   #
   # REMEMBER: This method **should** update cart
   
+  adjusted_cart = []
   
 end
 
