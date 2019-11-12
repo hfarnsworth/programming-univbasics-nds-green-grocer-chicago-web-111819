@@ -122,5 +122,11 @@ def checkout(cart, coupons)
   # BEFORE it begins the work of calculating the total (or else you might have
   # some irritated customers
   
+  final_cart = []
+  
+  final_cart = consolidate_cart(cart)
+  final_cart = apply_coupons(final_cart,coupons)
+  final_cart = apply_clearance(final_cart)
+  
   
 end
