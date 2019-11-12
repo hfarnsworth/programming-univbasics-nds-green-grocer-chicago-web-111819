@@ -58,13 +58,19 @@ def apply_coupons(cart, coupons)
   
   while cart_index < adjusted_cart.length do 
     coupon_item = coupons[:item]
+    valid_coupon = find_item_by_name_in_collection(coupon_item, coupons)
     
-    if find_item_by_name_in_collection(coupon_item, coupons)
-      if cart[cart_index][:count] < find_item_by_name_in_collection(coupon_item, coupons)[:num]
+    if coupon_check
+      if cart[cart_index][:count] < valid_coupon[:num]
         updated_cart[cart_index] = cart[cart_index]
       else
         updated_cart[cart_index] = cart[cart_index]
-        updated_cart[cart_index][:count] -= find_item_by_name_in_collection(coupon_item, coupons)[:num]
+        updated_cart[cart_index][:count] -= valid_coupon[:num]
+        coupon_cart << { 
+          :item=> "#{coupon_item} W/COUPON",
+          :price=> valid_coupon[:cost] / valid_coupon[:num],
+          :count=> valid_coupon[:num]
+        }
         
   
 end
